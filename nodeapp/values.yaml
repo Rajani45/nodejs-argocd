@@ -8,7 +8,7 @@ image:
   repository: rajaninandu/node-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -47,6 +47,7 @@ service:
   port: 3000
   targetPort: 3000
   protocol: TCP
+  name: nodeapp
 
 ingress:
   enabled: false
